@@ -40,13 +40,12 @@ for(const report of reports){
   if(isValid){
     safeReports++;
     continue;
-  }
-  if(!isValid){
+  }else{
     for (let i = 0; i < report.length; i++) {
       let shortedReport = [...report];
       shortedReport.splice(i, 1);
       isValid = isValidReport(shortedReport);
-      if(isValid){
+      if (isValid) {
         safeReports++;
         break;
       }
