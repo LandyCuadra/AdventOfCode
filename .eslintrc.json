@@ -5,11 +5,18 @@
     "es2024": true,
     "node": true
   },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 15,
+    "ecmaVersion": 2024,
     "sourceType": "module"
   },
-  "extends": "eslint:recommended",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "rules": {
     "indent": [
       "error",
